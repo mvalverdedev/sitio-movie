@@ -1,2 +1,2 @@
 # Sitio movie
-Sitio web para ver peliculas online
+Sitio web para ver trailers.
