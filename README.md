@@ -1,2 +1,2 @@
-# Sitio movie
+# Sitio trailers
 Sitio web para ver trailers.
