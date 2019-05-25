@@ -1,0 +1,253 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?3kgepb');
+  src:  url('../fonts/icomoon.eot?3kgepb#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?3kgepb') format('truetype'),
+    url('../fonts/icomoon.woff?3kgepb') format('woff'),
+    url('../fonts/icomoon.svg?3kgepb#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-settings:before {
+  content: "\e900";
+}
+.icon-like:before {
+  content: "\e901";
+}
+.icon-popular:before {
+  content: "\e902";
+}
+.icon-home:before {
+  content: "\e903";
+}
+.icon-circle-down:before {
+  content: "\e904";
+}
+
+body {
+   margin: 0;
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 90px) 180px minmax(294px,1fr) 270px;
+  grid-template-rows: 70px repeat(3, 90px) 1fr 90px;
+  grid-template-areas: "header header header header header"
+                        "panel  hero   hero   hero   hero"
+                        "panel  hero   hero   hero   hero"
+                        "panel  hero   hero   hero   hero"
+                        "panel  hero   hero   hero   hero"
+                        "panel  hero   hero   hero   hero";
+
+}
+
+.header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: repeat(2, 90px) 180px minmax(294px,1fr) 270px;
+  grid-template-areas: "logo logo . txtSearch settingsUser";
+  box-shadow: 0px 0px 10px lightgrey;
+}
+
+header .icon-circle-down {
+  color: black;
+  font-size: 13px;
+}
+
+.header .logo{
+  display: flex;
+  grid-area: logo;
+  justify-content: center;
+  align-items: center;
+}
+
+.header p{
+  display: inline-block;
+  margin: 0;
+}
+
+.header figure {
+  margin: 0;
+}
+
+.header .txtSearch {
+  grid-area: txtSearch;
+  border: #ccccd0 1px solid;
+  height: 50%;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  outline-style: none;
+}
+
+.header input::placeholder {
+  color: #ccccd0;
+  opacity: 1; /* Firefox */
+}
+
+.header input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color: #ccccd0;
+}
+
+.header input::-ms-input-placeholder { /* Microsoft Edge */
+ color: #ccccd0;
+}
+
+.header .settingsUser {
+  grid-area: settingsUser;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.settingsUser p {
+  font-weight: bold;
+  font-family: Arial;
+  font-size: 12px;
+}
+
+.settingsUser img {
+  width: 40px;
+  border-radius: 50px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.panel {
+  grid-area: panel;
+  background-color: #576d9d;
+  color: white;
+}
+
+.panel ul {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  list-style: none;
+  display: grid;
+  grid-template-rows: repeat(3, 90px) 1fr 90px;
+  grid-template-areas: "link1" "link2" "link3" "." "link4";
+}
+
+.panel li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.link1 {
+  grid-area: link1;
+}
+
+.link2 {
+  grid-area: link2;
+}
+
+.link3 {
+  grid-area: link3;
+}
+
+.link4 {
+  grid-area: link4;
+}
+
+.panel .icon-home, .icon-popular, .icon-like, .icon-settings{
+  color: white;
+  font-size: 30px;
+  display: block;
+}
+
+.hero {
+  grid-area: hero;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 17px;
+  padding: 25px;
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero-title-section {
+  font-weight: bold;
+  font-family: Arial;
+  font-size: 16px;
+}
+
+.hero-content-trailers {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fill, 213px);
+  justify-content: space-between;
+}
+
+.hero-content-trailers img {
+  height: 142px;
+  width: 213px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 4px lightgrey;  
+}
+
+.hero-container-trailer:hover .trailer-overlay{
+  display: block;
+}
+
+.hero-container-trailer {
+  position: relative;
+}
+
+.trailer-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  bottom: 4px;
+  background: rgba(142, 148, 167, 0.9);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  display: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.trailer-overlay p {
+  margin-top: 6px;
+  margin-bottom: 0;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.trailer-title {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.trailer-description {
+  font-size: 11px;
+  margin-top: 5px;
+}
