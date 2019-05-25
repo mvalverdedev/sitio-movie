@@ -1,5 +1,5 @@
 # Sitio trailers
 Sitio web para ver trailers.
 
-<img src="/CapturaSitioTrailer.png" alt="print app"/>
+<img src="/Screenshot.png" alt="print app"/>
 
